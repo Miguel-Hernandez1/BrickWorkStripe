@@ -1,26 +1,19 @@
 import React from "react";
-import "./App.css";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import ChoosePlan from "./pages/ChoosePlan";
-import Success from "./pages/Success";
-import Cancel from "./pages/Cancel";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
+import ChoosePlan from "./pages/ChoosePlan";
+import "./App.css";
 
-const stripePromise = loadStripe("your_publishable_key");
+const stripePromise = loadStripe(
+  "pk_test_51MvmeYCJok6azSgF01pya9b9eQKaEvP2AtZYZicoWRC0XnfG7TWQl5ep2MEqjSrpdT8IqraRss1NU1wlQj4rWXmb00HX9YUIwV"
+);
 
 function App() {
   return (
     <div className="App">
-      <Router>
-        <Elements stripe={stripePromise}>
-          <Routes>
-            <Route path="/" element={<ChoosePlan />} />
-            <Route path="/success" element={<Success />} />
-            <Route path="/cancel" element={<Cancel />} />
-          </Routes>
-        </Elements>
-      </Router>
+      <Elements stripe={stripePromise}>
+        <ChoosePlan />
+      </Elements>
     </div>
   );
 }

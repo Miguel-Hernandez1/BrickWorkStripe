@@ -4,18 +4,16 @@ module.exports = {
   darkMode: false,
   theme: {
     extend: {
-      fontFamily: {
-        sans: ["Montserrat", "sans-serif"],
+      backgroundColor: {
+        "brickwork-blue": "#0D1938",
+        "brickwork-yellow": "#FFC700",
       },
-      colors: {
-        "brickwork-orange": "#FF9900",
-        "brickwork-blue": "#002A6E",
-        "brickwork-dark-blue": "#001B4C",
-        "brickwork-light-blue": "#B9D1F8",
+      textColor: {
+        "brickwork-blue": "#0D1938",
       },
-      boxShadow: {
-        md: "0 4px 6px -1px rgba(0, 42, 110, 0.1), 0 2px 4px -1px rgba(0, 42, 110, 0.06)",
-      },
+    },
+    fontFamily: {
+      sans: ["Inter", "sans-serif"],
     },
   },
   variants: {

@@ -1,0 +1,10 @@
+.plan-card {
+  background-color: #ffffff;
+  color: #0d1938;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.plan-card:hover {
+  transform: translateY(-5px);
+}
